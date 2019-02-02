@@ -25,6 +25,8 @@ int main ()
         }
         if (valore > massimo)
             massimo = valore;
+        else if (valore > massimo2)
+            massimo2 = valore;
     }
  
     printf("il massimo dei valori inseriti e' %d mentre il secondo massimo e' %d", massimo, massimo2);
