@@ -4,14 +4,17 @@
 
 int main () 
 {
-    int valore, massimo = 0, contatore = 0;
-    printf("inserisci un valore \n");
-    while (contatore < 10) 
+    int valore, massimo, contatore = 0;
+    printf("inserisci 10 valori \n");
+    scanf("%d", &valore);
+    
+    massimo = valore;
+    while (contatore < 9) 
     {
         scanf("%d", &valore);
         contatore++;
         if (valore > massimo)
-            massimo  = valore;
+            massimo = valore;
     }
  
     printf("il massimo dei valori inseriti e' %d", massimo);
