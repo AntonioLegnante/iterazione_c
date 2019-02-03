@@ -9,22 +9,29 @@ int main ()
     scanf("%d",&valore);
     scanf("%d",&valore2);
 
-    massimo = valore; 
-    massimo2 = valore2;
-
+    if (valore > valore2)
+    {
+        massimo = valore;
+        massimo2 = valore2;
+    }
+    
+    else 
+    {
+        massimo = valore2;
+        massimo2 = valore;
+    }
+    
     while (contatore < 8) 
     {
         scanf("%d", &valore);
         contatore++;
 
-        if (massimo2 > massimo)
-        {
-            temporanea = massimo2;
-            massimo2 = massimo;
-            massimo = temporanea;
-        }
         if (valore > massimo)
+        {
+            massimo2 = massimo;
             massimo = valore;
+        }
+
         else if (valore > massimo2)
             massimo2 = valore;
     }
