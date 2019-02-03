@@ -4,15 +4,22 @@
 
 int main ()
 {
-    int lato, contatore_altezza = 0, contatore_larghezza = 0;
+    int lato, contatore_altezza, contatore_larghezza;
     
     printf("inserisci il lato che sia compreso tra 1 e 20 \n");
     do 
-        scanf("%d", &lato);
-        while (lato < 1 || lato > 20);
-    
-    while (contatore_altezza < lato)
     {
+        scanf("%d", &lato);
+    }
+    while (lato < 1 || lato > 20);
+    
+    contatore_altezza = 0;
+
+    while (contatore_altezza < lato)
+    {   
+        
+        contatore_larghezza = 0;
+
         while (contatore_larghezza < lato)
         {
             printf("|");
@@ -21,7 +28,6 @@ int main ()
         
         printf("\n");
 
-        contatore_larghezza = 0;
         contatore_altezza++;
     
     }
