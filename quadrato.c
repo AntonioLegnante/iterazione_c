@@ -22,11 +22,11 @@ int main ()
 
         while (contatore_larghezza < lato)
         {
-            printf("|");
+            putchar('|');
             contatore_larghezza++;
         }
         
-        printf("\n");
+        putchar('\n');
 
         contatore_altezza++;
     
