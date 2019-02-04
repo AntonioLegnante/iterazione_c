@@ -3,35 +3,51 @@
 
 int main ()
 {
-    int lato, contatore_altezza = 0, contatore_larghezza = 0;
+    int lato, contatore_altezza, contatore_larghezza;
     do 
     {
         printf("inserisci il lato del quadrato");
         scanf("%d", &lato);
     }
     while( lato < 1 || lato > 20 );
+    
+    contatore_larghezza = 0;
 
-    while (contatore_altezza < lato)
+    while (contatore_larghezza < lato)
     {
-        while (contatore_larghezza < lato)
-        {   
-            if (contatore_altezza == 0 || contatore_altezza == lato-1)
-                printf("|");
-            else 
-                if (contatore_larghezza == 0 || contatore_larghezza == lato-1)
-                    printf("|");
-                else 
-                    printf(" ");
-                
-                contatore_larghezza++;
-        }
-        
+        putchar('|');
+        contatore_larghezza++;
+    }
+ 
+    contatore_altezza = 1;
+
+    while (contatore_altezza < lato-1)
+    {
         printf("\n");
-
-        contatore_larghezza = 0;
+        
+        putchar('|');
+        
+        contatore_larghezza = 1;
+       
+        while (contatore_larghezza < lato-1)
+        {
+            putchar(' ');
+            contatore_larghezza++;
+        }
         contatore_altezza++;
-     }
+        
+        putchar('|');
+    }
+    
+    printf("\n");
+    contatore_larghezza = 0;
 
-     return 0;
+    while (contatore_larghezza < lato)
+    {
+        putchar('|');
+        contatore_larghezza++;
+    }
+ 
+    return 0;
 
-     }
+}
