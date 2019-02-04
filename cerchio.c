@@ -8,7 +8,9 @@ int main ()
     
     printf("inserisci il raggio che sia un valore positivo");
     do 
+    {
        scanf("%lf", &raggio);
+    }
     while(raggio < 0.0);
     
     printf("il diametro e' %f \n", raggio * 2.0);
