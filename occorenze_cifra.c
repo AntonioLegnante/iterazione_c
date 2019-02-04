@@ -8,7 +8,9 @@ int main ()
 
     printf("inserisci un numero che sia positivo");
     do 
+    {
         scanf("%d", &numero);
+    }
     while(numero < 0);
    
     while(numero > 0)
