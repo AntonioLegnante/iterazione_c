@@ -4,7 +4,7 @@
 
 int main () 
 {
-    int numero, cifre[4], i = 0; 
+    int numero, cifra1, cifra2, cifra4, cifra5; 
     
     printf("inserisci un valore intero da 5 cifre");
     do 
@@ -13,20 +13,18 @@ int main ()
 
     } while(numero < 9999 || numero > 99999);
      
-    while (i < 4)
-    {
-        if (numero < 99 || numero > 999)
-        {
-            cifre[i] = numero % 10;
-            numero /= 10;
-            i++;
-        }
-        else 
-            numero /= 10;
-    }
-    
-    
-    if (cifre[0] == cifre[3] && cifre[1] == cifre[2])
+    cifra5 = numero % 10;
+    numero /= 10;
+   
+    cifra4 = numero % 10;
+    numero /= 100;
+
+    cifra2 = numero % 10;
+    numero /= 10;
+
+    cifra1 = numero % 10;
+
+    if (cifra5 == cifra1 && cifra2 == cifra4)
         printf("il numero e' palindromo");
     else 
         printf("il numero non e' palindromo");
