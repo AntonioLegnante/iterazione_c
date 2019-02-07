@@ -4,14 +4,16 @@
 
 int main () 
 {
-    int binario, controllobinario, sentinella = 1, bit, decimale = 0, potenze, momentanea;
+    int binario, controllobinario, sentinella, bit, decimale = 0, potenze, momentanea;
     
     printf("inserisci un numero binario");
     do
     {
         scanf("%d", &binario);
         momentanea = binario;
-        while (momentanea > 0 || sentinella == 0)
+        sentinella = 1;
+
+        while (momentanea > 0 && sentinella != 0)
         {
             controllobinario = momentanea % 10;
             if (controllobinario == 1 || controllobinario == 0)
@@ -19,7 +21,7 @@ int main ()
             else 
                 sentinella = 0;
         }
-    }while(sentinella == 0);
+     }while(sentinella == 0);
     
     potenze = 1;
 
