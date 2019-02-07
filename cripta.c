@@ -32,7 +32,6 @@ int main ()
     cifra4 = numero % 10;
     cifra4 += 7;
     cifra4 %= 10;
-    numero /= 10;
 
     temp = cifra1;
     cifra1 = cifra3;
