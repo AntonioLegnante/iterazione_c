@@ -1,27 +1,30 @@
 /* fattoriale */
 
+#include <stdio.h>
+
 int main ()
 {
-    int 
+    int i, fattoriale, temp;
     
     for(i = 1; i <= 5; i++)
     {
         temp = i;
+        fattoriale = i;
 
-        if (i - 1 != 0)
+        if (i != 1)
         {
-            while(fattoriale - 1 != 0)
+            while(i - 1 != 0)
             {
-                decremento = i--;
-                fattoriale *= decremento;
+                i--;
+                fattoriale *= i;
             }
-        
+        }
         else 
             fattoriale = i;
-        
-            i = temp;
 
-            printf("%d", fattoriale);
+        i = temp;
+
+            printf("%5d", fattoriale);
   
      }
   
