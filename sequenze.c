@@ -4,7 +4,7 @@
 
 int main ()
 {
-    int i, j;
+    int i;
     
     for (i = 1; i <= 8; i++)
         printf("%5d", i);
