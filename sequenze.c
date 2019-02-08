@@ -10,34 +10,19 @@ int main ()
         printf("%5d", i);
 
     printf("\n");
-    
-    j = 3;
    
-    for (i = 0; i < 5; i++)
-    {
-        printf("%5d", j);
-        j += 5;
-    }
+    for (i = 3; i <= 23; i += 5)
+        printf("%5d", i);    
    
     printf("\n");
-    
-    j = 20; 
 
-    for (i = 0; i < 6; i++)
-    {
-        printf("%5d", j);
-        j -= 6;
-    }
+    for (i = 20; i >= -10; i -= 6)
+        printf("%5d", i);
 
     printf("\n");
     
-    j = 19;
-  
-    for (i = 0; i < 5; i++)
-    {
-        printf("%5d", j);
-        j += 8;
-    }
+    for (i = 19; i <= 51; i += 8)
+        printf("%5d", i);
 
    return 0;
 
