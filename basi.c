@@ -4,39 +4,41 @@
 
 int main ()
 {
-    int i, j, pesobin, pesoh, bit, temp, pesoexa;
+    int i, j, peso, bit, temp;
 
 
     for (i = 0; i <= 255; i++)
     {
-        pesobin = 128;
+        printf("%3d\t", i);
+  
+        peso = 128;
         temp = i;
         for (j = 0; j < 8; j++)
         {
-            bit = temp / pesobin;
-            temp -= bit * pesobin; 
+            bit = temp / peso;
+            temp -= bit * peso; 
             printf("%d", bit);
-            pesobin = pesobin / 2;
+            peso = peso / 2;
         }
         printf("\t");
 
-        pesoh = 64;
+        peso = 64;
         temp = i;
         for (j = 0; j < 3; j++)
         {
-            bit = temp / pesoh;
-            temp -= bit * pesoh; 
+            bit = temp / peso;
+            temp -= bit * peso; 
             printf("%d", bit);
-            pesoh = pesoh / 8;
+            peso = peso / 8;
         }
 
                printf("\t");
 
-        pesoexa = 16;
+        peso = 16;
         temp = i;
         for (j = 0; j < 2; j++)
         {
-            bit = temp / pesoexa;
+            bit = temp / peso;
             switch(bit) 
             {
                 case 10:
@@ -68,8 +70,8 @@ int main ()
                 break;
             }
 
-            temp -= bit * pesoexa; 
-            pesoexa = pesoexa / 16;
+            temp -= bit * peso; 
+            peso = peso / 16;
         }
         printf("\n");
     }
